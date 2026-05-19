@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carnet de voyage</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Inter:wght@400;500;600&display=swap');
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,Arial,sans-serif;background:#f5f1ea;color:#1f1a17;padding:40px 20px}
+    .page{width:min(1100px,100%);min-height:1500px;margin:0 auto 40px auto;background:#fcfaf7;box-shadow:0 12px 40px rgba(0,0,0,.08);position:relative;overflow:hidden}
+    .page-cover{display:flex;align-items:center;justify-content:center;background:linear-gradient(rgba(255,248,240,.18),rgba(255,248,240,.18)), url('hero.jpg4.jpg') center/cover no-repeat}
+    .cover-title{font-family:'Great Vibes',cursive;font-size:clamp(58px,9vw,120px);color:#2d2118;text-shadow:0 2px 12px rgba(255,255,255,.45)}
+    .page-japan{background:url('japon-page-2.jpg') center/cover no-repeat}
+    .page-japan::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom, rgba(255,255,255,.10), rgba(255,255,255,.18))}
+    .page-japan .inner{position:relative;z-index:1;height:100%;display:flex;align-items:flex-end;padding:60px}
+    .page-japan h2{font-family:'Cormorant Garamond',serif;font-size:54px;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.45)}
+    .page-photos{padding:50px 42px 70px}
+    .script{font-family:'Great Vibes',cursive}
+    .title-main{text-align:center;font-size:88px;line-height:1;color:#131313;margin-bottom:36px}
+    .section-row{display:flex;align-items:center;justify-content:center;gap:34px;margin-bottom:28px}
+    .section-row h3{font-size:54px;color:#181818}
+    .camera{font-size:54px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:42px 52px;align-items:start}
+    .photo{background:#eee;border-radius:2px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+    .photo img{width:100%;height:100%;display:block;object-fit:cover}
+    .photo.a{height:310px}
+    .photo.b{height:380px}
+    .photo.c{height:360px}
+    .photo.d{height:310px}
+    .sub{font-size:42px;text-align:center;margin:26px 0 18px;font-family:'Cormorant Garamond',serif}
+    @media (max-width: 800px){
+      body{padding:20px 10px}
+      .page{min-height:auto}
+      .page,.page-cover,.page-japan{aspect-ratio:210/297}
+      .title-main{font-size:54px}
+      .section-row h3{font-size:38px}
+      .grid{grid-template-columns:1fr;gap:24px}
+      .page-japan .inner{padding:24px}
+      .page-japan h2{font-size:38px}
+    }
+  </style>
+</head>
+<body>
+  <section class="page page-cover">
+    <h1 class="cover-title">Carnet de voyage</h1>
+  </section>
+
+  <section class="page page-japan">
+    <div class="inner">
+      <h2>Le Japon en images</h2>
+    </div>
+  </section>
+
+  <section class="page page-photos">
+    <h2 class="title-main script">Carnet de voyage</h2>
+    <div class="section-row">
+      <h3 class="script">Photos</h3>
+      <div class="camera">📷</div>
+    </div>
+    <div class="grid">
+      <div class="photo a"><img src="image.jpg" alt="Photo carnet 1" /></div>
+      <div class="photo b"><img src="image-2.jpg" alt="Photo carnet 2" /></div>
+    </div>
+    <div class="sub">Voyage de rêve</div>
+    <div class="grid">
+      <div class="photo c"><img src="image-3.jpg" alt="Photo carnet 3" /></div>
+      <div class="photo d"><img src="image-4.jpg" alt="Photo carnet 4" /></div>
+    </div>
+  </section>
+</body>
+</html>
